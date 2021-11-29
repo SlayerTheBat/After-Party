@@ -15,7 +15,7 @@ import java.util.List;
 public class ContactoSQLite extends SQLiteOpenHelper {
 
     public ContactoSQLite(Context context) {
-        super(context, "EJEMPLO", null, 1);
+        super(context, "Hola", null, 2);
     }
 
 
