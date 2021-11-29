@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     Boolean ver = DB.registro(Nombre, Contraseña);
                     if(ver==true){
                         Toast.makeText(MainActivity.this, "Inicio Sesion Exitoso", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent( MainActivity.this, Registro.class);
+                        Intent intent = new Intent( MainActivity.this, Menu.class);
 
                         startActivity(intent);
                     }else{
