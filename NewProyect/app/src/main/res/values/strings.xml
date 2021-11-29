@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Proyecto</string>
+    <string name="inicio">Iniciar Sesión</string>
+    <string name="inicio2">Iniciar Sesión</string>
+    <string name="menu">Menu</string>
+    <string name="transporte">Transporte</string>
+    <string name="limpieza">Limpieza</string>
+    <string name="tranlimp">Transporte + Limpieza</string>
+    <string name="registrar">Registrar</string>
+    <string name="contacto">Contacto</string>
+    <string name="reclamo">Reclamo</string>
+    <string name="notificacones">Notificaciones</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="enviar">Enviar</string>
+    <string name="servicio">Servicio</string>
+    <string name="opciones">Opciones</string>
+    <string name="descripcion">Conductores:</string>
+    <string name="sebastian">Sebastian Fernandez</string>
+    <string name="Adriana">Adriana</string>
+    <string name="reclamar">Realizar Reclamo</string>
+    <string name="nombre">Nombre:</string>
+    <string name="contraseña">Contraseña:</string>
+    <string name="motivo">Motivo</string>
 </resources>

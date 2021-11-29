@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto">
         <activity
+            android:name=".Menu"
+            android:exported="true" />
+        <activity
+            android:name=".Motivo"
+            android:exported="true" />
+        <activity
+            android:name=".Contacto"
+            android:exported="true" />
+        <activity
+            android:name=".Opciones"
+            android:exported="true" />
+        <activity
+            android:name=".Registro"
+            android:exported="true" />
+        <activity
+            android:name=".Reclamo"
+            android:exported="true" />
+        <activity
+            android:name=".Inicio_Sesion"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
