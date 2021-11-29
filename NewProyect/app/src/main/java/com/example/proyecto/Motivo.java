@@ -18,7 +18,7 @@ public class Motivo extends AppCompatActivity {
         btnOtra1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent( Motivo.this, Inicio_Sesion.class);
+                Intent intent = new Intent( Motivo.this, Menu.class);
                 startActivity(intent);
             }
         });

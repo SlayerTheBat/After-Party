@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+    CuentaSQLite DB ;
     Button btnOtra, btnOtra1;
     private EditText nombre;
     private EditText contraseña;
@@ -21,11 +23,24 @@ public class MainActivity extends AppCompatActivity {
         nombre= (EditText)findViewById(R.id.TextNombre);
         contraseña=(EditText)findViewById(R.id.TextContraseña);
         btnOtra1 = findViewById(R.id.button3);
-        sqLite = new CuentaSQLite(this);
+        DB = new CuentaSQLite(this);
         btnOtra.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                validate(nombre.getText().toString(), contraseña.getText().toString());
+                String Nombre = nombre.getText().toString();
+                String Contraseña = contraseña.getText().toString();
+                if(Nombre.equals("")||contraseña.equals("")){
+                    Toast.makeText(MainActivity.this, "Inserte datos", Toast.LENGTH_SHORT).show();
+                }else{
+                    Boolean ver = DB.registro(Nombre, Contraseña);
+                    if(ver==true){
+                        Toast.makeText(MainActivity.this, "Inicio Sesion Exitoso", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent( MainActivity.this, Registro.class);
+
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(MainActivity.this, "Datos Incorrectos", Toast.LENGTH_SHORT).show();
+                    }}
             }
 
         });
@@ -41,12 +56,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void validate(String nombre, String contraseña) {
-        if((nombre.equals("vicente")) && (contraseña.equals("vicente"))){
-            Intent intent = new Intent(MainActivity.this, Menu.class);
-            startActivity(intent);
-        }else{
 
-        }
-    }
 }
